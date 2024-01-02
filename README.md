@@ -1,11 +1,11 @@
 # Minha configuração pessoal do Neovim
 
-# Instalação
+## Instalação
 ```
 git clone --depth 1 https://github.com/SobrancelhaDoDragao/nvim_config/ ~/.config/nvim
 ```
 
-# Desinstalando 
+## Desinstalando 
 ```
 rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim
