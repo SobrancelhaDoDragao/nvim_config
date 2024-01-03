@@ -11,5 +11,7 @@ return {
 	{
 		"olimorris/onedarkpro.nvim",
 	},
-	{ "rose-pine/neovim" },
+	{
+		"rose-pine/neovim",
+	},
 }

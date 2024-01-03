@@ -7,9 +7,8 @@ return {
       sources = {
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.prettier,
+        null_ls.builtins.formatting.black,
       },
     })
-
-    vim.keymap.set("n", "<F9>", vim.lsp.buf.format, {})
   end,
 }
