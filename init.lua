@@ -40,4 +40,4 @@ require("mason-lspconfig").setup({
   },
 })
 
-vim.cmd.colorscheme("carbonfox")
+vim.cmd.colorscheme("onedark")
