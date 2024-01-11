@@ -18,7 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
 require("lazy").setup("plugins")
-
+-- Configuracao do lsp zero
 local lsp_zero = require("lsp-zero")
 
 lsp_zero.on_attach(function(client, bufnr)
@@ -35,9 +35,10 @@ require("mason-lspconfig").setup({
     "rust_analyzer",
     "tsserver",
   },
+  -- Configuracao padrao de todos os LSP que serao instalados
   handlers = {
     lsp_zero.default_setup,
   },
 })
 
-vim.cmd.colorscheme("carbonfox")
+vim.cmd.colorscheme("terafox")
