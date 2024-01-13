@@ -41,4 +41,4 @@ require("mason-lspconfig").setup({
   },
 })
 
-vim.cmd.colorscheme("terafox")
+vim.cmd.colorscheme("catppuccin")
