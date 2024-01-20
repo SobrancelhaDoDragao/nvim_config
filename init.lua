@@ -1,17 +1,16 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-vim.opt.termguicolors = true
 
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
 end
 
 vim.opt.rtp:prepend(lazypath)
@@ -22,23 +21,23 @@ require("lazy").setup("plugins")
 local lsp_zero = require("lsp-zero")
 
 lsp_zero.on_attach(function(client, bufnr)
-  -- see :help lsp-zero-keybindings
-  -- to learn the available actions
-  lsp_zero.default_keymaps({ buffer = bufnr })
+    -- see :help lsp-zero-keybindings
+    -- to learn the available actions
+    lsp_zero.default_keymaps({ buffer = bufnr })
 end)
 
 require("mason").setup({})
 
 require("mason-lspconfig").setup({
-  ensure_installed = {
-    "lua_ls",
-    "rust_analyzer",
-    "tsserver",
-  },
-  -- Configuracao padrao de todos os LSP que serao instalados
-  handlers = {
-    lsp_zero.default_setup,
-  },
+    ensure_installed = {
+        "lua_ls",
+        "rust_analyzer",
+        "tsserver",
+    },
+    -- Configuracao padrao de todos os LSP que serao instalados
+    handlers = {
+        lsp_zero.default_setup,
+    },
 })
 
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("nightfox")
